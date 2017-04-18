@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-gulp-rename/gulp-rename/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-gulp-rename/node_modules/gulp-rename/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -190,9 +192,9 @@
 <body>
 <div class="header low">
     <h1 style="font-weight: bold;">
-        <a href="https://github.com/npmtest/node-npmtest-gulp-rename">npmtest-gulp-rename (v0.0.2)</a>
+        <a href="https://github.com/npmtest/node-npmtest-gulp-rename">npmtest-gulp-rename (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-rename/gulp-rename/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-rename/node_modules/gulp-rename/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">18.52% <small>(5 / 27)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-rename/gulp-rename/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-rename/node_modules/gulp-rename/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -349,73 +351,72 @@
 var Stream = require('stream');
 var Path = require('path');
 &nbsp;
-<span class="fstat-no" title="function not covered">function gulpRename(obj) {</span>
+<span class="fstat-no" title="function not covered" >function gulpRename(obj) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var stream = new Stream.Transform({objectMode: true});</span>
+<span class="cstat-no" title="statement not covered" >  var stream = new Stream.Transform({objectMode: true});</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">  function parsePath(path) {</span>
-<span class="cstat-no" title="statement not covered">    var extname = Path.extname(path);</span>
-<span class="cstat-no" title="statement not covered">    return {</span>
+<span class="fstat-no" title="function not covered" >  function parsePath(path) {</span>
+<span class="cstat-no" title="statement not covered" >    var extname = Path.extname(path);</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
       dirname: Path.dirname(path),
       basename: Path.basename(path, extname),
       extname: extname
     };
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  stream._transform = <span class="fstat-no" title="function not covered">function(file, unused, callback) {</span></span>
+<span class="cstat-no" title="statement not covered" >  stream._transform = <span class="fstat-no" title="function not covered" >function(file, unused, callback) {</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var parsedPath = parsePath(file.relative);</span>
-<span class="cstat-no" title="statement not covered">    var path;</span>
+<span class="cstat-no" title="statement not covered" >    var parsedPath = parsePath(file.relative);</span>
+<span class="cstat-no" title="statement not covered" >    var path;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var type = typeof obj;</span>
+<span class="cstat-no" title="statement not covered" >    var type = typeof obj;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (type === 'string' &amp;&amp; obj !== '') {</span>
+<span class="cstat-no" title="statement not covered" >    if (type === 'string' &amp;&amp; obj !== '') {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      path = obj;</span>
+<span class="cstat-no" title="statement not covered" >      path = obj;</span>
 &nbsp;
-    } else <span class="cstat-no" title="statement not covered">if (type === 'function') {</span>
+    } else <span class="cstat-no" title="statement not covered" >if (type === 'function') {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      obj(parsedPath);</span>
-<span class="cstat-no" title="statement not covered">      path = Path.join(parsedPath.dirname, parsedPath.basename + parsedPath.extname);</span>
+<span class="cstat-no" title="statement not covered" >      obj(parsedPath);</span>
+<span class="cstat-no" title="statement not covered" >      path = Path.join(parsedPath.dirname, parsedPath.basename + parsedPath.extname);</span>
 &nbsp;
-    } else <span class="cstat-no" title="statement not covered">if (type === 'object' &amp;&amp; obj !== undefined &amp;&amp; obj !== null) {</span>
+    } else <span class="cstat-no" title="statement not covered" >if (type === 'object' &amp;&amp; obj !== undefined &amp;&amp; obj !== null) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var dirname = 'dirname' in obj ? obj.dirname : parsedPath.dirname,</span>
+<span class="cstat-no" title="statement not covered" >      var dirname = 'dirname' in obj ? obj.dirname : parsedPath.dirname,</span>
         prefix = obj.prefix || '',
         suffix = obj.suffix || '',
         basename = 'basename' in obj ? obj.basename : parsedPath.basename,
         extname = 'extname' in obj ? obj.extname : parsedPath.extname;
 &nbsp;
-<span class="cstat-no" title="statement not covered">      path = Path.join(dirname, prefix + basename + suffix + extname);</span>
+<span class="cstat-no" title="statement not covered" >      path = Path.join(dirname, prefix + basename + suffix + extname);</span>
 &nbsp;
     } else {
 &nbsp;
-<span class="cstat-no" title="statement not covered">      callback(new Error('Unsupported renaming parameter type supplied'), undefined);</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >      callback(new Error('Unsupported renaming parameter type supplied'), undefined);</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
 &nbsp;
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    file.path = Path.join(file.base, path);</span>
+<span class="cstat-no" title="statement not covered" >    file.path = Path.join(file.base, path);</span>
 &nbsp;
     // Rename sourcemap if present
-<span class="cstat-no" title="statement not covered">    if (file.sourceMap) {</span>
-<span class="cstat-no" title="statement not covered">      file.sourceMap.file = file.relative;</span>
+<span class="cstat-no" title="statement not covered" >    if (file.sourceMap) {</span>
+<span class="cstat-no" title="statement not covered" >      file.sourceMap.file = file.relative;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    callback(null, file);</span>
+<span class="cstat-no" title="statement not covered" >    callback(null, file);</span>
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return stream;</span>
+<span class="cstat-no" title="statement not covered" >  return stream;</span>
 }
 &nbsp;
 module.exports = gulpRename;
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 21:34:00 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 17:09:08 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
