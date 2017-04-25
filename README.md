@@ -1,6 +1,6 @@
 # npmtest-gulp-rename
 
-#### test coverage for  [gulp-rename (v1.2.2)](https://github.com/hparra/gulp-rename)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-rename.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-rename) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-rename.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-rename)
+#### basic test coverage for  [gulp-rename (v1.2.2)](https://github.com/hparra/gulp-rename)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-rename.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-rename) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-rename.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-rename)
 
 #### Rename files
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-rename/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-rename/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-gulp-rename/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-rename/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-rename/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-rename/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-gulp-rename/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-gulp-rename/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-rename/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-rename/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-gulp-rename/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-gulp-rename/build/coverage.html/index.html)
 
@@ -100,7 +100,8 @@
         "pretest": "jshint index.js test/",
         "test": "mocha"
     },
-    "version": "1.2.2"
+    "version": "1.2.2",
+    "bin": {}
 }
 ```
 
